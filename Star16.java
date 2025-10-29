@@ -6,7 +6,7 @@ public class Star16 {
         System.out.print("Masukkan Nilai N = ");
         int n = scanner.nextInt();
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <=n; i++) {
             System.out.print("*");
             
             }
