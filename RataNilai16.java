@@ -14,7 +14,7 @@ public class RataNilai16 {
             nilaiMHS = sc.nextInt();
             totalNilai += nilaiMHS;
         }
-        rataNilai = totalNilai/5;
+        rataNilai = totalNilai/ 5;
         System.out.println("Rata-rata Nilai = " + rataNilai);
 
         j=1;
