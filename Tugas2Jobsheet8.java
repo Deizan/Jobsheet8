@@ -39,9 +39,7 @@ public class Tugas2Jobsheet8{
         }System.out.println("\t\t===Perguruan Tinggi dan Mahasiswa Yang terdaftar===\n");
         System.out.println("Perguruan Tinggi\tNama peserta\t\tJenis Cabor" );
         System.out.println(semuaNama);
-        
-        
-        
-        
-     }
+
+        sc.close();
+    }
                     }
