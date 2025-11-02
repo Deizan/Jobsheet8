@@ -12,7 +12,8 @@ public class Tugas1Jobsheet8 {
          System.out.println(N + " " + N + " " + N );
 
          System.out.println();
-         
+
+
          System.out.println(N + " " + N + " " + N + " " + N + " " + N );
          System.out.println(N + "       " + N );
          System.out.println(N + "       " + N );

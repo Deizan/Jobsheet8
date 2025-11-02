@@ -1,39 +1,47 @@
 import java.util.Scanner;
 
-public class Tugas2Jobsheet8 {
-     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String[] sports = {"Badminton", "Tenis Meja", "Basket", "Bola Voli"};
+public class Tugas2Jobsheet8{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
         
-        System.out.print("Masukkan jumlah peserta: ");
-        int jumlahPeserta = input.nextInt();
-        input.nextLine(); 
+        String nama, perguruanTinggi, semuaNama = "",cabor = "";
         
-        for (int i = 1; i <= jumlahPeserta; i++) {
-            System.out.println("Data Peserta ke-" + i);
-            System.out.print("Masukkan nama: ");
-            String nama = input.nextLine();
-            
-            System.out.println("Pilih cabang olahraga:");
-            for (int j = 0; j < sports.length; j++) {
-                System.out.println((j + 1) + ". " + sports[j]);
+        for(int i = 1; true;i++){
+            System.out.print("Asal perguruan tinggi ke-"+i+" (ketik 'done' untuk berhenti): ");
+            perguruanTinggi = sc.nextLine();
+            if (perguruanTinggi.equalsIgnoreCase("done")) {
+                System.out.println("Pendaftaran diselesaikan\n");
+                break;
             }
-            
-            System.out.print("Masukkan pilihan (1-4): ");
-            int pilihan = input.nextInt();
-            input.nextLine(); 
-            
-            if (pilihan >= 1 && pilihan <= 4) {
-                System.out.println("Data yang dimasukkan:");
-                System.out.println("Nama: " + nama);
-                System.out.println("Cabang Olahraga: " + sports[pilihan - 1]);
-            } else {
-                System.out.println("Pilihan tidak valid!");
-                i--; 
+            for (int o = 1; o <= 4 ; o++){
+                
+                if (o == 1){
+                    cabor = "badminton";
+                }else if (o == 2){
+                    cabor = "tenis";
+                }else if (o == 3){
+                    cabor = "basket";
+                }else if (o == 4){
+                    cabor = "voli";
+                }
+                
+                System.out.println("Tim atlet "+cabor+": ");
+                
+                for(int j = 1; j <= 5;j++){
+                System.out.print("Nama atlet ke-"+j+" : ");
+                nama = sc.nextLine();
+                
+                semuaNama += " "+perguruanTinggi + "\t : " + "\t" + nama + "\t\t terdaftar cabor ke-"+ cabor +"\n";
+                }
+                System.out.println();
             }
-        }
+            System.out.println();
+        }System.out.println("\t\t===Perguruan Tinggi dan Mahasiswa Yang terdaftar===\n");
+        System.out.println("Perguruan Tinggi\tNama peserta\t\tJenis Cabor" );
+        System.out.println(semuaNama);
         
-        input.close();
-    }
-}
-
+        
+        
+        
+     }
+                    }
